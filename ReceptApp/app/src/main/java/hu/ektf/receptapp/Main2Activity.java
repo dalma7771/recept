@@ -33,7 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         InputStream is = null;
         try {
             is = new FileInputStream(file);
-            Reader reader = new InputStreamReader(is);
+            Reader reader = new InputStreamReader(is,"UTF-8");
             BufferedReader br = new BufferedReader(reader);
             TextView leir = (TextView) findViewById(R.id.textView3);
             String line;
