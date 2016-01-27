@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
         ListView ls = (ListView)findViewById(R.id.listView);
         ArrayList<Recept> list = new ArrayList<>();
-        Recept r = new Recept("Túrógombóc",R.mipmap.turogomboc);
+        Recept r = new Recept("vmi",R.mipmap.turogomboc);
         list.add(r);
+        Recept r2 = new Recept("Rántott tejbegríz",R.mipmap.tejbegriz);
+        list.add(r2);
         ReceptAdapter receptAdapter = new ReceptAdapter(MainActivity.this,list);
         ls.setAdapter(receptAdapter);
     }

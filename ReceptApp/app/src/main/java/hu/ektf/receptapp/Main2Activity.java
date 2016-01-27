@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +31,7 @@ public class Main2Activity extends AppCompatActivity {
         imageView.setImageResource(kepId);
         String sdCard = Environment.getExternalStorageDirectory().getAbsolutePath();
         File file = new File(sdCard+"/receptek/"+nev.toLowerCase()+".txt");
+        Toast.makeText(this, "/receptek/"+nev.toLowerCase()+".txt", Toast.LENGTH_SHORT).show();
         InputStream is = null;
         try {
             is = new FileInputStream(file);
